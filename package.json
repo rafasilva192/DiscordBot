@@ -1,0 +1,10 @@
+{
+  "name": "discord-bot-gords",
+  "version": "0.0.1",
+  "description": "Discord bot built by Gords Zarack",
+  "dependencies": {
+    "discord.js": "^11.0.0",
+    "express": "^4.15.2",
+    "uws": "^0.14.1"
+  }
+}
