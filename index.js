@@ -1,10 +1,12 @@
 // import the discord.js module
 const Discord = require('discord.js')
 const messageService = require('./services/messageService')
-const sysConst = require('./constants/systemConstants')
+const config = require('./config/config.json')
 
 // create an instance of a Discord Client, and call it bot
 const bot = new Discord.Client()
+
+const token = 'MzA2NTQxODA2MTc3MzUzNzI5.C-OU2w.1mY_VbmvfMGYBdLcP_TtYoNK3Sg'
 // the ready event is vital, it means that your bot will only start reacting to information
 // from Discord _after_ ready is emitted.
 bot.on('ready', () => {
@@ -20,4 +22,4 @@ bot.on('message', message => {
 })
 
 // log our bot in
-bot.login(sysConst.TOKEN)
+bot.login(config.token)
