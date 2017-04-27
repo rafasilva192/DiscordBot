@@ -4,7 +4,11 @@
   "description": "Discord bot built by Gords Zarack",
   "dependencies": {
     "discord.js": "^11.0.0",
+    "editorconfig": "^0.13.2",
+    "eslint": "^3.19.0",
     "express": "^4.15.2",
+    "lodash": "^4.17.4",
+    "mongodb": "^2.2.26",
     "uws": "^0.14.1"
   }
 }

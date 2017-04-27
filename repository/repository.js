@@ -1,7 +1,7 @@
 //
 const MongoClient = require('mongodb').MongoClient
 const systConsts = require('../constants/systemConstants')
-const uri = `mongodb://discordbotgords:${systConsts.DISCORDCREDENTIALS.password}@discordrepository-shard-00-00-2qfxt.mongodb.net:27017,discordrepository-shard-00-01-2qfxt.mongodb.net:27017,discordrepository-shard-00-02-2qfxt.mongodb.net:27017/${systConsts.DISCORDCREDENTIALS.database}?ssl=true&replicaSet=DiscordRepository-shard-0&authSource=admin`
+const uri = `mongodb://${systConsts.DISCORDCREDENTIALS.user}:${systConsts.DISCORDCREDENTIALS.password}@ds123331.mlab.com:23331/discordbot`
 
 module.exports = {
 	connect: () => MongoClient.connect(uri, (err, db) => {

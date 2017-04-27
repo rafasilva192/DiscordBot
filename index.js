@@ -2,24 +2,24 @@
 const Discord = require('discord.js')
 const messageService = require('./services/messageService')
 const config = require('./config/config.json')
-
 // create an instance of a Discord Client, and call it bot
-const bot = new Discord.Client()
+const client = new Discord.Client()
 
-const token = 'MzA2NTQxODA2MTc3MzUzNzI5.C-OU2w.1mY_VbmvfMGYBdLcP_TtYoNK3Sg'
 // the ready event is vital, it means that your bot will only start reacting to information
 // from Discord _after_ ready is emitted.
-bot.on('ready', () => {
+client.on('ready', () => {
 	console.log('Up and Running')
 })
 
 // create an event listener for messages
-bot.on('message', message => {
-	const response = messageService.handleMessages(message, bot)
-	if (response) {
-		message.channel.sendMessage(response);
+client.on('message', message => {
+	if (message.content.substring(0,1) === config.prefix) {
+		const response = messageService.handleMessages(message, client)
+		if (response) {
+			message.channel.sendMessage(response)
+		}
 	}
 })
 
 // log our bot in
-bot.login(config.token)
+client.login(config.token)
