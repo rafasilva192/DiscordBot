@@ -1,7 +1,3 @@
-/*
-  A ping pong bot, whenever you send "ping", it replies "pong".
-*/
-
 // import the discord.js module
 const Discord = require('discord.js')
 const messageService = require('./services/messageService');
@@ -14,7 +10,7 @@ const bot = new Discord.Client()
 // from Discord _after_ ready is emitted.
 bot.on('ready', () => {
   console.log('Up and Running')
-});
+})
 
 // create an event listener for messages
 bot.on('message', message => {
@@ -22,7 +18,7 @@ bot.on('message', message => {
   if (response) {
     message.channel.sendMessage(response);
   }
-});
+})
 
 // log our bot in
-bot.login(sysConst.TOKEN);
+bot.login(sysConst.TOKEN)
