@@ -1,15 +1,17 @@
-const prefix = '~'
 const request = require('../constants/requests')
+const sysConst = require('../constants/systemConstants')
+const _ = require('lodash')
+
 module.exports = {
     handleMessages: (message, bot) => {
         const notABotUser = !message.author.bot
-        if (message.author.username === 'Gords') console.log(bot.channels)
-       // console.log(prefix, message.author.username, message.content)
+        if (message.author.id === sysConst.OWNER.id) console.log(message.channel)
+        console.log(sysConst.PREFIX, message.author.username, message.content)
         if(notABotUser) {
-            if (message.content.toLowerCase() === prefix + request.PING) {
+            if (message.content.toLowerCase() === sysConst.PREFIX + request.PING) {
                 return 'ping?'
-            } else if (message.content.toLowerCase() === prefix + 'who am i?'  && message.author.username === 'Gords') {
-                return 'hello, you are ' + message.author.username
+            } else if (message.content.toLowerCase() === sysConst.PREFIX + 'who am i?'  && message.author.id === sysConst.OWNER.id) {
+                return 'hello, you are <@!' + message.author.id + '>'
             }
         }
     }
