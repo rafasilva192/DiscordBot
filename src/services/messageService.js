@@ -7,8 +7,8 @@ const _ = require('lodash')
 module.exports = {
 	handleMessages: (message, bot) => {
 		const notABotUser = !message.author.bot
-		if (compare(message.author.id, sysConst.OWNER.id)) console.log(message.channel)
-		console.log(sysConst.PREFIX, message.author.username, message.content)
+		//if (compare(message.author.id, sysConst.OWNER.id)) console.log(message.channel)
+		//console.log(sysConst.PREFIX, message.author.username, message.content)
 		if (notABotUser) {
 			if (compare(message.content.toLowerCase(), request.PING)) {
 				return 'ping?'
@@ -17,6 +17,7 @@ module.exports = {
 				return 'hello, you are <@!' + message.author.id + '>'
 			}
 		}
+		return null
 	}
 }
 
