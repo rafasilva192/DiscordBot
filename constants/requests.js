@@ -1,3 +1,3 @@
 module.exports = {
-    PING: 'ping',
+	PING: 'ping',
 }
