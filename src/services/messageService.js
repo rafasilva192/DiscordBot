@@ -6,8 +6,6 @@ const _ = require('lodash')
 
 module.exports = {
 	handleMessages: (message, client) => {
-		//if (compare(message.author.id, sysConst.OWNER.id)) console.log(message.channel)
-		console.log(prefix, message.author.username, message.content)
 		switch (message.content.toLowerCase()) {
 			case request.PING.request:
 				return request.PING.response

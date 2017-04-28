@@ -1,12 +1,14 @@
 {
   "name": "discord-bot-gords",
   "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo node src/index"
+  },
   "description": "Discord bot built by Gords Zarack",
   "dependencies": {
-    "discord.js": "^11.0.0",
-    "editorconfig": "^0.13.2",
-    "eslint": "^3.19.0",
-    "express": "^4.15.2",
+    "bufferutil": "^3.0.0",
+    "discord.js": "^8.0.0",
     "lodash": "^4.17.4",
     "mocha": "^3.3.0",
     "mongodb": "^2.2.26",
