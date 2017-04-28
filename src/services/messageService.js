@@ -10,6 +10,7 @@ module.exports = {
 			case request.PING.request:
 				return request.PING.response
 			case request.EVENT.request:
+				repositoryService.save('event', request.EVENT.request)
 				return request.EVENT.response
 			default:
 				return null

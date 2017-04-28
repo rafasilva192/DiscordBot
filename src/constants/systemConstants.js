@@ -1,4 +1,4 @@
 module.exports = {
 	OWNER: { id: '82996900650815488', name: 'Gords' },
-	DISCORDCREDENTIALS: { username: 'discordbotgords', password: 'HigG9EujWBwptFZm', database: 'DiscordRepository' }
+	DISCORDCREDENTIALS: { user: 'botadmin', password: 'AbUkasP8AS12', database: 'DiscordRepository' }
 }

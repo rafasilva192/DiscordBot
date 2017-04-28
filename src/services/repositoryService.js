@@ -1,8 +1,8 @@
 const repository = require('../repository/repository')
 
 module.exports = {
-	save: (object) => {
-		console.log(repository, object)
-		repository.connect()
+	save: (object, collection) => {
+		console.log(object, collection)
+		repository.save(object, collection)
 	}
 }
