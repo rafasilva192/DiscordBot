@@ -4,7 +4,7 @@ const prefix = require('./../../src/config/config').prefix
 const expect = chai.expect
 const messageService = require('./../../src/services/messageService')
 
-let message = { author: { bot: false }}
+var message = { author: { bot: false }}
 const client = new Discord.Client()
 
 describe('MessageService', () => {
@@ -13,8 +13,8 @@ describe('MessageService', () => {
     expect(messageService.handleMessages(message, client)).to.equal(null);
   })
 
-  it('handleMessages should return ping? if the message is a valid function', () => {
+  it('handleMessages should return pong! if the message is a valid function', () => {
 		message.content = `${prefix}ping`
-    expect(messageService.handleMessages(message, client)).to.equal('ping?');
+    expect(messageService.handleMessages(message, client)).to.equal('pong!');
   })
 })
