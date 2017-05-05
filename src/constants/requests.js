@@ -1,4 +1,5 @@
-const config = require('../config/config.json')
+const prefix = require('../config/config.json').prefix
+const sysConst = require('./systemConstants.js')
 const repositoryService = require('../services/repositoryService')
 
 const eventResponse = (object, collection) => {
@@ -6,6 +7,9 @@ const eventResponse = (object, collection) => {
 }
 
 module.exports = {
-	PING: { request: `${config.prefix}ping`, response: 'pong!' } ,
-	EVENT: { request: `${config.prefix}event`, response: '> Function under development!' },
+	REQUESTS: [
+		PING = { request: `${prefix}ping`, response: 'pong!' } ,
+		EVENT = { request: `${prefix}event`, response: '> Function under development!' },
+		REPME = { request: `${prefix}repme`, response: `t!rep <@${sysConst.OWNER.id}> <:FeelsBlobMan:303966294720643072>` }
+	]
 }

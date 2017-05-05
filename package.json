@@ -3,17 +3,18 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index",
+    "start": "node-dev src/index",
     "test": "mocha test -w --recursive"
   },
   "description": "Discord bot built by Rafael Henrique da Silva",
   "dependencies": {
     "bufferutil": "^3.0.0",
+    "cleverbot-node": "^0.3.10",
     "discord.js": "^8.0.0",
     "lodash": "^4.17.4",
-    "mongodb": "^2.2.26",
     "mongoose": "^4.9.7",
-    "uws": "^0.14.1"
+    "uws": "^0.14.1",
+    "webpack": "^2.5.0"
   },
   "keywords": [
     "discordjs",
